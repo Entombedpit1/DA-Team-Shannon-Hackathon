@@ -15,6 +15,10 @@ run/main_scene="uid://cegbgjn8uyn05"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerInfo="*res://singletons/player_info.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
