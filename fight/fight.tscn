@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://cna32xqofpno3"]
+[gd_scene load_steps=2 format=3 uid="uid://cna32xqofpno3"]
+
+[ext_resource type="Script" uid="uid://705vqr7wua0x" path="res://fight/fight_controller.gd" id="1_wldmm"]
 
 [node name="Fight" type="Node2D"]
+script = ExtResource("1_wldmm")
