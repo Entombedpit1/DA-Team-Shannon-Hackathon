@@ -1,13 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://cegbgjn8uyn05"]
+[gd_scene load_steps=8 format=3 uid="uid://cegbgjn8uyn05"]
 
 [ext_resource type="Texture2D" uid="uid://bso0yhg7tp56c" path="res://main/snow.png" id="1_dhah8"]
+[ext_resource type="Script" uid="uid://dqoxx5ajjq3jw" path="res://main/main_menu.gd" id="1_w2mlq"]
 [ext_resource type="FontFile" uid="uid://b6k6kbrn4yikc" path="res://main/SovietProgram-Italic.ttf" id="2_w2mlq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4u0aa"]
 texture = ExtResource("1_dhah8")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekbk0"]
-bg_color = Color(0.99215686, 0.07058824, 0, 1)
+bg_color = Color(0.9838049, 0.11875398, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dhah8"]
+bg_color = Color(0, 0.5368944, 0.9651664, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2mlq"]
+bg_color = Color(0, 0.5368944, 0.9651664, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -21,6 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w2mlq")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -38,10 +56,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -273.0
-offset_top = -182.0
-offset_right = -60.5
-offset_bottom = 66.0
+offset_left = -262.0
+offset_top = -158.0
+offset_right = -49.5
+offset_bottom = -21.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_constants/separation = 15
@@ -52,6 +70,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_w2mlq")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ekbk0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dhah8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2mlq")
 text = "Play"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
@@ -60,6 +80,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_w2mlq")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ekbk0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dhah8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2mlq")
 text = "Options
 "
 
@@ -69,6 +91,8 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_w2mlq")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ekbk0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dhah8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_w2mlq")
 text = "Exit
 "
 
@@ -79,6 +103,14 @@ offset_right = 764.0
 offset_bottom = 381.0
 rotation = -0.17453292
 theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.99607843, 0.99215686, 0.99215686, 0.67058825)
+theme_override_colors/font_outline_color = Color(0.99607843, 0.9843137, 0.96862745, 0.9647059)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("2_w2mlq")
 theme_override_font_sizes/font_size = 150
 text = "Durak"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
