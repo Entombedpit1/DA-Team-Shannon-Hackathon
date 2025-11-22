@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://4uhjpa8yc0sm"]
 
-[ext_resource type="Texture2D" uid="uid://c47i1dogv110j" path="res://tutorial/Hearts/Hearts_card_01.png" id="1_27cya"]
+[ext_resource type="Texture2D" uid="uid://c47i1dogv110j" path="res://tutorial/cards/Hearts_card_01.png" id="1_27cya"]
 [ext_resource type="Script" uid="uid://cittvl06uguii" path="res://tutorial/Card.gd" id="1_21626"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21626"]
@@ -10,7 +10,7 @@ size = Vector2(80, 102)
 position = Vector2(1743, 200)
 script = ExtResource("1_21626")
 
-[node name="cardHeartA" type="Sprite2D" parent="."]
+[node name="CardImage" type="Sprite2D" parent="."]
 position = Vector2(0, -1.90735e-06)
 scale = Vector2(6, 6)
 texture = ExtResource("1_27cya")
