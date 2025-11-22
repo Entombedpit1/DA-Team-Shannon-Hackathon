@@ -11,8 +11,8 @@
 resource_local_to_scene = true
 script/source = "extends Node2D"
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyr1x"]
-size = Vector2(4.3888893, 5.638889)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvhjn"]
+size = Vector2(4.4444423, 5.5555563)
 
 [node name="Intro" type="Node2D"]
 
@@ -27,6 +27,8 @@ script = SubResource("GDScript_hmjho")
 script = ExtResource("4_pyr1x")
 
 [node name="Deck" type="Node2D" parent="."]
+light_mask = 4
+visibility_layer = 4
 script = ExtResource("5_qxo2y")
 
 [node name="DeckImage" type="Sprite2D" parent="Deck"]
@@ -36,14 +38,15 @@ scale = Vector2(6, 6)
 texture = ExtResource("5_pyr1x")
 
 [node name="Area2D" type="Area2D" parent="Deck/DeckImage"]
-position = Vector2(1730, 200)
+position = Vector2(77, -44)
 scale = Vector2(6, 6)
 collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/DeckImage/Area2D"]
-position = Vector2(1730, 200)
-shape = SubResource("RectangleShape2D_pyr1x")
+position = Vector2(-12.888889, 7.2222223)
+shape = SubResource("RectangleShape2D_kvhjn")
+debug_color = Color(0.83128375, 0.24601951, 0.7619162, 0.41960785)
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("7_6rdw8")
