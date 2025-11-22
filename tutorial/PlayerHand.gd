@@ -1,9 +1,14 @@
 extends Node2D
 
+<<<<<<< HEAD
 const HAND_COUNT = 6
 const CARD_SCENE_PATH = "res://tutorial/Card.tscn"
 const CARD_WIDTH = 300
 const HAND_Y_POSITION = 900
+=======
+const CARD_WIDTH = 200
+const HAND_Y_POSITION = 950
+>>>>>>> 22be05dd6c0607c721ad288d57e550fcf5392077
 
 var player_hand = []
 var center_screen_x
@@ -13,12 +18,15 @@ var center_screen_x
 func _ready() -> void:
 	center_screen_x = get_viewport().size.x /2
 	
+<<<<<<< HEAD
 	var card_scene = preload(CARD_SCENE_PATH)
 	for i in range(HAND_COUNT):
 		var new_card = card_scene.instantiate()
 		$"../CardManager".add_child(new_card)
 		new_card.name = "Card"
 		add_card_to_hand(new_card)
+=======
+>>>>>>> 22be05dd6c0607c721ad288d57e550fcf5392077
 		
 
 func add_card_to_hand(card):
