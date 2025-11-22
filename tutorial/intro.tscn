@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://crag6yfk6n8fu"]
+[gd_scene load_steps=5 format=3 uid="uid://crag6yfk6n8fu"]
 
 [ext_resource type="Script" uid="uid://dt1yvs5blirv0" path="res://tutorial/CardManager.gd" id="1_ud2wk"]
 [ext_resource type="PackedScene" uid="uid://4uhjpa8yc0sm" path="res://tutorial/Card.tscn" id="2_hmjho"]
+[ext_resource type="PackedScene" uid="uid://8wdcilxh8ivh" path="res://tutorial/CardSlot.tscn" id="3_hmjho"]
+[ext_resource type="Script" uid="uid://cefyf8jllqdrq" path="res://tutorial/CardSlot.gd" id="4_43tuy"]
 
 [node name="Intro" type="Node2D"]
 
@@ -9,6 +11,15 @@
 script = ExtResource("1_ud2wk")
 
 [node name="card" parent="CardManager" instance=ExtResource("2_hmjho")]
+top_level = true
+position = Vector2(384, 509)
+scale = Vector2(2, 2)
 
 [node name="card2" parent="CardManager" instance=ExtResource("2_hmjho")]
-position = Vector2(152, 118)
+top_level = true
+position = Vector2(566, 513)
+scale = Vector2(2, 2)
+
+[node name="CardSlot" parent="." instance=ExtResource("3_hmjho")]
+position = Vector2(731, 215)
+script = ExtResource("4_43tuy")

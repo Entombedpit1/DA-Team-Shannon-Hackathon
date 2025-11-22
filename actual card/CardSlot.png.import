@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0q6itpc8gwp"
-path="res://.godot/imported/Room_Builder_Floors_16x16.png-4c757a5ca9459d6fb2e854b5ba997f77.ctex"
+uid="uid://beqjqdccr13hi"
+path="res://.godot/imported/CardSlot.png-d7642d3e986a2614873f5defa58c143b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Rooms/intior assets/Room assets/Room_Builder_Floors_16x16.png"
-dest_files=["res://.godot/imported/Room_Builder_Floors_16x16.png-4c757a5ca9459d6fb2e854b5ba997f77.ctex"]
+source_file="res://actual card/CardSlot.png"
+dest_files=["res://.godot/imported/CardSlot.png-d7642d3e986a2614873f5defa58c143b.ctex"]
 
 [params]
 

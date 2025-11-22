@@ -1,10 +1,12 @@
 extends Node2D
 
 const COLLISION_MASK_CARD = 1
+const COLLISION_MASK_CARD_SLOT = 2
 
 var screen_size
 var card_being_dragged
 var is_hovering_on_card
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,17 +30,24 @@ func _input(event):
 			if card:
 				start_drag(card)
 		else:
-			finish_drag()
+			if card_being_dragged:
+				finish_drag()
 		
 		
 
 func start_drag(card):
 	card_being_dragged = card
-	card.scale = Vector2(1, 1)
+	card.scale = Vector2(2, 2)
 
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(1.05, 1.05)
+	card_being_dragged.scale = Vector2(2.05, 2.05)
+	var card_slot_found = raycast_check_for_card_slot()
+	if card_slot_found and not card_slot_found.card_in_slot:
+		#card dropped in emptry slot
+		card_being_dragged.position = card_slot_found.position
+		card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
+		card_slot_found.card_in_slot = true
 	card_being_dragged = null
 
 
@@ -71,11 +80,24 @@ func on_hovered_off_card(card):
 
 func highlight_card(card, hovered):
 	if hovered:
-		card.scale = Vector2(1.05, 1.05)
+		card.scale = Vector2(2.05, 2.05)
 		card.z_index = 2
 	else:
-		card.scale = Vector2(1, 1)
+		card.scale = Vector2(2, 2)
 		card.z_index = 1
+	
+
+
+func raycast_check_for_card_slot():
+	var space_state = get_world_2d().direct_space_state
+	var parameters = PhysicsPointQueryParameters2D.new()
+	parameters.position = get_global_mouse_position()
+	parameters.collide_with_areas = true
+	parameters.collision_mask = COLLISION_MASK_CARD_SLOT
+	var result = space_state.intersect_point(parameters)
+	if result.size() > 0:
+		return result[0].collider.get_parent()
+	return null
 	
 
 
