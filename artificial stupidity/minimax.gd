@@ -1,25 +1,14 @@
 extends Node
 
-# lots of magic numbers in this thing :)
-
 class MiniMaxNode:
-	var draw_pile:Array[CardResource]
+	var draw_pile:Array[CardResource] = []
 
 class GameState:
-	var opponent_max_health:int
-	var opponent_curr_health:int
-	var is_attacking:bool
-	var self_max_health:int
-	var self_curr_health:int
 	var draw_pile:Array[CardResource]
 	var self_hand:Array[CardResource]
-	var opponent_hand:Array[CardResource]
-	var active_attacks:Array[CardResource]
-	var ranks_on_board:Array[int]
-	var num_cards_on_board:int
-	var trump_suit:StringName
 
 
+<<<<<<< HEAD
 func mini_max(game_state:GameState, alpha:int, beta:int, depth:int, isMaximPlayer:bool) -> int:
 	if (game_state.opponent_curr_health <= 0 || game_state.self_curr_health <= 0):
 		return evaluate_game_state(game_state);
@@ -111,3 +100,7 @@ func evaluate_game_state(game_state:GameState) -> int:
 	var self_missing_health_val:int = -100 * (game_state.self_max_health - game_state.self_curr_health)
 	
 	return self_hand_value + opp_missing_health_val + self_missing_health_val - opp_hand_value
+=======
+func miniMax(game_state:GameState):
+	pass
+>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)

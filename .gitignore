@@ -6,3 +6,10 @@
 =======
 /addons/
 >>>>>>> Stashed changes
+*.gd
+/artificial stupidity
+tutorial/CardManager.gd
+artificial stupidity/minimax.gd
+tutorial/CardManager.gd
+tutorial/intro.tscn
+tutorial/PlayerHand.gd.uid
