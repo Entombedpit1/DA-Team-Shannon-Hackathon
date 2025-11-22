@@ -25,5 +25,4 @@ func populate_default_cards() -> Array[CardResource]:
 			# same thing for defence
 			DEFAULT_DECK[i].Defence = 11 if (rank == 14) else min(rank, 10)
 			i = i + 1
-	print(i)
 	return DEFAULT_DECK
