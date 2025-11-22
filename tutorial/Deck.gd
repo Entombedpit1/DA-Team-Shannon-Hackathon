@@ -8,7 +8,7 @@ var player_deck = ["Hearts_card_01", "Hearts_card_02", "Hearts_card_03",
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$RichTextLabel.text = str(player_deck.size())
 
 
 func draw_card():
@@ -19,8 +19,9 @@ func draw_card():
 	if player_deck.size() == 0:
 		$Area2D/CollisionShape2D.disabled = true
 		$Sprite2D.visible = false
+		$RichTextLabel.visible = false
 	
-	print("draw card")
+	$RichTextLabel.text = str(player_deck.size())
 	var card_scene = preload(CARD_SCENE_PATH)
 	var new_card = card_scene.instantiate()
 	$"../CardManager".add_child(new_card)
