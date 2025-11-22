@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 PlayerInfo="*res://singletons/player_info.gd"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
