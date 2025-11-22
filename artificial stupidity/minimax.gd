@@ -20,15 +20,32 @@ class GameState:
 	var trump_suit:StringName
 
 
-func mini_max(game_state:GameState, alpha:int, beta:int, depth:int, isMaximPlayer:bool):
-	pass
+func mini_max(game_state:GameState, alpha:int, beta:int, depth:int, isMaximPlayer:bool) -> int:
+	if (game_state.opponent_curr_health <= 0 || game_state.self_curr_health <= 0):
+		return evaluate_game_state(game_state);
+	elif (depth == 0 || game_state.opponent_hand.size() <= 0 || game_state.self_hand.size() <= 0):
+		# implement MCTS if we have time
+		pass
+	
+	if (isMaximPlayer):
+		var max_eval:int = -1000000
+		for branch in find_possible_positions(game_state):
+			var eval:int = mini_max(branch, alpha, beta, depth - 1, !isMaximPlayer)
+			max_eval = max(max_eval, eval)
+			alpha = max(alpha, eval)
+			if (beta <= alpha):
+				break
+		return max_eval
+	return false
 
 func find_possible_positions(game_state:GameState) -> Array[GameState]:
 	var ret_states:Array[GameState];
 	if (game_state.is_attacking):
 		for card in game_state.self_hand:
 			if (game_state.ranks_on_board.has(card.Rank)):
-				pass
+				var temp:GameState = game_state
+				temp.self_hand.erase(card)
+				ret_states.append(temp)
 	
 	return ret_states
 
