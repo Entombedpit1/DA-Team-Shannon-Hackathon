@@ -1,18 +1,15 @@
 extends Node2D
 
+var power_suit:StringName;
+
 var table_arr:Array[CardResource] # array of all the cards on the table
 var ranks_already_on_table:Array[int] # list of ranks already on the table to determine what cards can be played
 var open_attacks:Array[CardResource] # list of cards defense needs to defend and the card lane
 
-var DEFAULT_DECK:Array[CardResource]
-
-
 var draw_pile:Array[CardResource]
 
+var player_1_hand:Array[CardResource]
 
-
-
-var power_suit:StringName;
 
 var attacker:StringName
 var player_health:int
@@ -27,14 +24,14 @@ func _input(event):
 		example += 1;
 		if example > 51:
 			example = 0
-		print(DEFAULT_DECK[example].Rank, " ", DEFAULT_DECK[example].Suit)
+		print(draw_pile[example].Rank, " ", draw_pile[example].Suit)
 	elif event.is_action_pressed("ui_down"):
 		example -= 1;
 		if example < 0:
 			example = 51
-		print(DEFAULT_DECK[example].Rank, " ", DEFAULT_DECK[example].Suit)
+		print(draw_pile[example].Rank, " ", draw_pile[example].Suit)
 	elif event.is_action_pressed("ui_right"):
-		attack(DEFAULT_DECK[example])
+		attack(draw_pile[example])
 		for card in table_arr:
 			print(card.Suit, card.Rank)
 		print("open attacks: ")
@@ -43,19 +40,22 @@ func _input(event):
 		print("")
 	elif event.is_action_pressed("ui_left"):
 		if !open_attacks.is_empty():
-			defend(open_attacks[0], DEFAULT_DECK[example])
+			defend(open_attacks[0], draw_pile[example])
 	elif event.is_action_pressed("ui_accept"):
 		end_turn()
 	
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var i:int = randi_range(0, 3)
-	power_suit = DefaultCards.SUIT_NAMES[i]
 	table_arr = []
 	ranks_already_on_table = []
 	example = 0
-	DEFAULT_DECK = DefaultCards.populate_default_cards()
+	draw_pile = DefaultCards.populate_default_cards()
+	draw_pile.shuffle()
+	
+	# First card is selected as Trump suit and removed from draw pile
+	power_suit = draw_pile[0].Suit
+	draw_pile.remove_at(0)
 	
 	
 	
