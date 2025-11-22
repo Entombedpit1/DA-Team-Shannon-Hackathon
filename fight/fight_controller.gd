@@ -39,6 +39,8 @@ func _input(event):
 	elif event.is_action_pressed("ui_left"):
 		if !open_attacks.is_empty():
 			defend(open_attacks[0], DEFAULT_DECK[example])
+	elif event.is_action_pressed("ui_accept"):
+		end_turn()
 	
 
 # Called when the node enters the scene tree for the first time.
