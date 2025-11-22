@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://crag6yfk6n8fu"]
+[gd_scene load_steps=6 format=3 uid="uid://crag6yfk6n8fu"]
 
 [ext_resource type="Script" uid="uid://dt1yvs5blirv0" path="res://tutorial/CardManager.gd" id="1_ud2wk"]
 [ext_resource type="PackedScene" uid="uid://4uhjpa8yc0sm" path="res://tutorial/Card.tscn" id="2_hmjho"]
-[ext_resource type="PackedScene" uid="uid://8wdcilxh8ivh" path="res://tutorial/CardSlot.tscn" id="3_hmjho"]
+[ext_resource type="Texture2D" uid="uid://cicrne7ol61mw" path="res://tutorial/CardSlot.png" id="3_hmjho"]
 
 [sub_resource type="GDScript" id="GDScript_hmjho"]
 resource_local_to_scene = true
@@ -10,6 +10,9 @@ script/source = "extends Node2D
 
 var card_in_slot = false
 "
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl2kn"]
+size = Vector2(168, 209)
 
 [node name="Intro" type="Node2D"]
 
@@ -26,6 +29,36 @@ top_level = true
 position = Vector2(566, 513)
 scale = Vector2(2, 2)
 
-[node name="CardSlot" parent="." instance=ExtResource("3_hmjho")]
+[node name="CardSlot" type="Node2D" parent="."]
 position = Vector2(731, 215)
 script = SubResource("GDScript_hmjho")
+
+[node name="CardSlotImage" type="Sprite2D" parent="CardSlot"]
+position = Vector2(-1.4305115e-06, -0.5000019)
+scale = Vector2(0.9333332, 0.7886792)
+texture = ExtResource("3_hmjho")
+
+[node name="Area2D" type="Area2D" parent="CardSlot"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardSlot/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_jl2kn")
+
+[node name="CardSlot2" type="Node2D" parent="."]
+position = Vector2(524, 213)
+script = SubResource("GDScript_hmjho")
+
+[node name="CardSlotImage" type="Sprite2D" parent="CardSlot2"]
+position = Vector2(-1.4305115e-06, -0.5000019)
+scale = Vector2(0.9333332, 0.7886792)
+texture = ExtResource("3_hmjho")
+
+[node name="Area2D" type="Area2D" parent="CardSlot2"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardSlot2/Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_jl2kn")
