@@ -3,16 +3,21 @@ extends Node2D
 var table_arr:Array[CardResource] # array of all the cards on the table
 var ranks_already_on_table:Array[int] # list of ranks already on the table to determine what cards can be played
 var open_attacks:Array[CardResource] # list of cards defense needs to defend and the card lane
-var nums_attack_lanes:int
 
-var DEFAULT_DECK:Dictionary[int,CardResource] 
+var DEFAULT_DECK:Array[CardResource]
 
 
 var draw_pile:Array[CardResource]
 
+
+
+
 var power_suit:StringName;
 
 var attacker:StringName
+var player_health:int
+var computer_health:int
+
 var defender:StringName
 
 var example:int;
@@ -34,7 +39,7 @@ func _input(event):
 			print(card.Suit, card.Rank)
 		print("open attacks: ")
 		for card in open_attacks:
-			print(card.Suit, card.Rank)
+			print(card.Suit, card.Rank, " ", card.Damage)
 		print("")
 	elif event.is_action_pressed("ui_left"):
 		if !open_attacks.is_empty():
@@ -47,11 +52,19 @@ func _input(event):
 func _ready() -> void:
 	var i:int = randi_range(0, 3)
 	power_suit = DefaultCards.SUIT_NAMES[i]
-	nums_attack_lanes = 0
 	table_arr = []
 	ranks_already_on_table = []
 	example = 0
 	DEFAULT_DECK = DefaultCards.populate_default_cards()
+	
+	
+	
+	attacker = &"Player"
+	player_health = GlobalInfo.player_stats.MAX_HEALTH
+	print("Player health: ", player_health)
+
+
+	defender = &"Computer"
 	print("Power suit: ", power_suit)
 
 
@@ -61,7 +74,6 @@ func attack(card:CardResource) -> bool:
 		table_arr.append(card)
 		ranks_already_on_table.append(card.Rank)
 		open_attacks.append(card)
-		nums_attack_lanes += 1
 		return true
 	else:
 		print("Not allowed! rank not on table")
@@ -79,6 +91,7 @@ func defend(attacking_card:CardResource, defending_card:CardResource) -> bool:
 			# REMEMBER TO IMPLEMENT GRAPHICS
 			open_attacks.erase(attacking_card)
 			table_arr.append(defending_card)
+			ranks_already_on_table.append(defending_card.Rank)
 			print("successfully defended")
 			return true
 	print("not allowed! defend better you bozo")
@@ -89,4 +102,9 @@ func end_turn() -> void:
 		# defender is successful
 		print("Defender is defend")
 	else:
-		print("whoopsie u ded")
+		for card in open_attacks:
+			player_health -= card.Damage
+			print("You took ", card.Damage, " damage")
+			open_attacks.erase(card)
+	table_arr.clear()
+	print("You now have ", player_health, " health")

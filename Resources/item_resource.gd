@@ -1,7 +1,5 @@
-extends Node
-
-var max_health:int
-var deck:Dictionary[int,CardResource];
+class_name ItemResource
+extends Resource
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

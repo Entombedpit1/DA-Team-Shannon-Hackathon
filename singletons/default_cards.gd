@@ -9,10 +9,10 @@ var SUIT_NAMES:Array[StringName] = [
 	]
 # default deck
 
-func populate_default_cards() -> Dictionary[int,CardResource]:
-	var DEFAULT_DECK:Dictionary[int,CardResource] 
+func populate_default_cards() -> Array[CardResource]:
+	var DEFAULT_DECK:Array[CardResource]
 	for card_num in 52:
-		DEFAULT_DECK[card_num] = CardResource.new()
+		DEFAULT_DECK.append(CardResource.new())
 	
 	# populates default deck with all 52 cards in a standard deck
 	var i:int = 0;
@@ -21,9 +21,9 @@ func populate_default_cards() -> Dictionary[int,CardResource]:
 			DEFAULT_DECK[i].Suit = SUIT_NAMES[suit]
 			DEFAULT_DECK[i].Rank = rank
 			# damage equal to rank (face cards are 10, aces are 11)
-			DEFAULT_DECK[i].Damage = 11 if (rank == 14) else max(rank, 10)
+			DEFAULT_DECK[i].Damage = 11 if (rank == 14) else min(rank, 10)
 			# same thing for defence
-			DEFAULT_DECK[i].Defence = 11 if (rank == 14) else max(rank, 10)
+			DEFAULT_DECK[i].Defence = 11 if (rank == 14) else min(rank, 10)
 			i = i + 1
 	print(i)
 	return DEFAULT_DECK
