@@ -109,3 +109,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dhah8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w2mlq")
 text = "Exit
 "
+
+[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_exit_pressed"]
