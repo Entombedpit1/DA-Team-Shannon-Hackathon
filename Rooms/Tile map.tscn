@@ -7861,7 +7861,8 @@ sources/1 = SubResource("TileSetAtlasSource_pb2wy")
 sources/2 = SubResource("TileSetAtlasSource_76haq")
 
 [node name="TutorialTile" type="Node2D"]
-position = Vector2(-378, 205)
+position = Vector2(-960, -320)
+scale = Vector2(2.5, 2.5)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_es1xi")
