@@ -1,5 +1,9 @@
 extends Node2D
 
+
+const MAX_HAND_SIZE:int = 6
+var game_state:GameState
+
 var power_suit:StringName;
 
 var table_arr:Array[CardResource] # array of all the cards on the table
@@ -24,14 +28,14 @@ func _input(event):
 		example += 1;
 		if example > 51:
 			example = 0
-		print(draw_pile[example].Rank, " ", draw_pile[example].Suit)
+		print(game_state.draw_pile[example].Rank, " ", game_state.draw_pile[example].Suit)
 	elif event.is_action_pressed("ui_down"):
 		example -= 1;
 		if example < 0:
 			example = 51
-		print(draw_pile[example].Rank, " ", draw_pile[example].Suit)
+		print(game_state.draw_pile[example].Rank, " ", game_state.draw_pile[example].Suit)
 	elif event.is_action_pressed("ui_right"):
-		attack(draw_pile[example])
+		attack(game_state.draw_pile[example])
 		for card in table_arr:
 			print(card.Suit, card.Rank)
 		print("open attacks: ")
@@ -47,16 +51,28 @@ func _input(event):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	table_arr = []
-	ranks_already_on_table = []
-	example = 0
-	draw_pile = DefaultCards.populate_default_cards()
-	draw_pile.shuffle()
+	game_state = GameState.new()
+	game_state.discard_pile = []
+	game_state.ranks_on_board = []
+	game_state.draw_pile = DefaultCards.populate_default_cards()
+	game_state.draw_pile.shuffle()
 	
+	game_state.player_max_health = GlobalInfo.player_stats.MAX_HEALTH
+	game_state.player_curr_health = game_state.player_max_health
+	game_state.computer_is_attacking = false
+	game_state.computer_max_health = 100
+	game_state.computer_curr_health = game_state.computer_max_health
+	for n in MAX_HAND_SIZE:
+		var temp_res = game_state.draw_pile.pop_back()
+		game_state.computer_hand.append(temp_res)
+		game_state.player_hand.append(game_state.draw_pile.pop_back())
+	game_state.active_attacks = []
+	game_state.ranks_on_board = []
+	game_state.is_terminal = false
 	# First card is selected as Trump suit and removed from draw pile
-	power_suit = draw_pile[0].Suit
-	draw_pile.remove_at(0)
-	
+	var trump_card = game_state.draw_pile.pop_back()
+	if trump_card != null:
+		game_state.trump_suit = trump_card.Suit
 	
 	
 	attacker = &"Player"

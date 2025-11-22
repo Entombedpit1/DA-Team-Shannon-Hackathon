@@ -5,12 +5,14 @@ const HAND_Y_POSITION = 950
 
 var player_hand = []
 var center_screen_x
-
+var caard = preload("res://tutorial/Card.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	center_screen_x = get_viewport().size.x /2
-	
+	#var aaa = caard.instantiate()
+	#self.get_parent().add_child.call_deferred(aaa)
+	#player_hand.append(aaa)
 		
 
 func add_card_to_hand(card):

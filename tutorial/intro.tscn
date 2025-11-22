@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dturs2sy1wirq"]
+[gd_scene load_steps=11 format=3 uid="uid://dturs2sy1wirq"]
 
+[ext_resource type="Script" uid="uid://705vqr7wua0x" path="res://fight/fight_controller.gd" id="1_qxo2y"]
 [ext_resource type="Script" uid="uid://dt1yvs5blirv0" path="res://tutorial/CardManager.gd" id="1_ud2wk"]
 [ext_resource type="PackedScene" path="res://tutorial/CardSlot.tscn" id="3_hmjho"]
 [ext_resource type="Script" uid="uid://xnfgh0vh8jwx" path="res://tutorial/PlayerHand.gd" id="4_pyr1x"]
 [ext_resource type="Texture2D" uid="uid://ckxrjntfcc1g1" path="res://tutorial/back_0.png" id="5_pyr1x"]
 [ext_resource type="Script" uid="uid://ch2o02841k7e3" path="res://tutorial/Deck.gd" id="5_qxo2y"]
 [ext_resource type="Script" path="res://tutorial/InputManager.gd" id="7_6rdw8"]
+[ext_resource type="Script" uid="uid://bvhsotwbdat8s" path="res://artificial stupidity/mcts.gd" id="8_6rdw8"]
 
 [sub_resource type="GDScript" id="GDScript_hmjho"]
 resource_local_to_scene = true
@@ -15,6 +17,7 @@ script/source = "extends Node2D"
 size = Vector2(4.4444423, 5.5555563)
 
 [node name="Intro" type="Node2D"]
+script = ExtResource("1_qxo2y")
 
 [node name="CardManager" type="Node2D" parent="."]
 script = ExtResource("1_ud2wk")
@@ -50,3 +53,6 @@ debug_color = Color(0.83128375, 0.24601951, 0.7619162, 0.41960785)
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("7_6rdw8")
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource("8_6rdw8")
