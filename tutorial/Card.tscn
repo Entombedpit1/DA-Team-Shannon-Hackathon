@@ -1,7 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://4uhjpa8yc0sm"]
+[gd_scene load_steps=55 format=3 uid="uid://4uhjpa8yc0sm"]
 
 [ext_resource type="Texture2D" uid="uid://c47i1dogv110j" path="res://tutorial/Hearts/Hearts_card_01.png" id="1_27cya"]
 [ext_resource type="Script" uid="uid://cittvl06uguii" path="res://tutorial/Card.gd" id="1_21626"]
+[ext_resource type="Texture2D" uid="uid://bbmtqfb5w5lpr" path="res://tutorial/Hearts/Hearts_card_02.png" id="2_devs7"]
+[ext_resource type="Texture2D" uid="uid://clbfw60nto33k" path="res://tutorial/Hearts/Hearts_card_03.png" id="3_k0113"]
+[ext_resource type="Texture2D" uid="uid://d0pdrayxeq82d" path="res://tutorial/Hearts/Hearts_card_04.png" id="4_f7hxd"]
+[ext_resource type="Texture2D" uid="uid://uo0y7nhuij2g" path="res://tutorial/Hearts/Hearts_card_05.png" id="5_tnhea"]
+[ext_resource type="Texture2D" uid="uid://bvibhvl3etck0" path="res://tutorial/Hearts/Hearts_card_06.png" id="6_jx8hw"]
+[ext_resource type="Texture2D" uid="uid://bniy4av1t2aij" path="res://tutorial/Hearts/Hearts_card_07.png" id="7_tn0c3"]
+[ext_resource type="Texture2D" uid="uid://bapu4df83imct" path="res://tutorial/Hearts/Hearts_card_08.png" id="8_adaby"]
+[ext_resource type="Texture2D" uid="uid://52icrugbvv1i" path="res://tutorial/Hearts/Hearts_card_09.png" id="9_boy1y"]
+[ext_resource type="Texture2D" uid="uid://cyeo34t8604nw" path="res://tutorial/Hearts/Hearts_card_10.png" id="10_yid7b"]
+[ext_resource type="Texture2D" uid="uid://c2wwqs6sbkjio" path="res://tutorial/Hearts/Hearts_card_11.png" id="11_1o81i"]
+[ext_resource type="Texture2D" uid="uid://cb08a8hs50cci" path="res://tutorial/Hearts/Hearts_card_12.png" id="12_47kqe"]
+[ext_resource type="Texture2D" uid="uid://d3bf53p3bg57t" path="res://tutorial/Hearts/Hearts_card_13.png" id="13_o6uox"]
+[ext_resource type="Texture2D" uid="uid://cvrsnaruhjb5i" path="res://tutorial/Hearts/Spades_card_02.png" id="15_oywkj"]
+[ext_resource type="Texture2D" uid="uid://dulfa0ribii6d" path="res://tutorial/Hearts/Spades_card_03.png" id="16_owtdr"]
+[ext_resource type="Texture2D" uid="uid://c6j87otvcsltf" path="res://tutorial/Hearts/Spades_card_04.png" id="17_ohqdg"]
+[ext_resource type="Texture2D" uid="uid://dr1edffx2e1sd" path="res://tutorial/Hearts/Spades_card_05.png" id="18_nx60x"]
+[ext_resource type="Texture2D" uid="uid://dbf8aoi3r07wf" path="res://tutorial/Hearts/Spades_card_06.png" id="19_8khol"]
+[ext_resource type="Texture2D" uid="uid://2588clou4bqu" path="res://tutorial/Hearts/Spades_card_07.png" id="20_i51m3"]
+[ext_resource type="Texture2D" uid="uid://t2c5k5nhybik" path="res://tutorial/Hearts/Spades_card_08.png" id="21_yl0gs"]
+[ext_resource type="Texture2D" uid="uid://4svuhyy5j22p" path="res://tutorial/Hearts/Spades_card_09.png" id="22_a5f05"]
+[ext_resource type="Texture2D" uid="uid://dbfjigmp3sxih" path="res://tutorial/Hearts/Spades_card_10.png" id="23_eql3u"]
+[ext_resource type="Texture2D" uid="uid://lujchq3x4xdx" path="res://tutorial/Hearts/Spades_card_11.png" id="24_hivq1"]
+[ext_resource type="Texture2D" uid="uid://djn8d5t613pqm" path="res://tutorial/Hearts/Spades_card_12.png" id="25_yyaeu"]
+[ext_resource type="Texture2D" uid="uid://b7efoxl1irjsk" path="res://tutorial/Hearts/Spades_card_13.png" id="26_jdobr"]
+[ext_resource type="Texture2D" uid="uid://bekcq0rgipndt" path="res://tutorial/Hearts/Spades_card_01.png" id="27_2axjt"]
+[ext_resource type="Texture2D" uid="uid://tfdp02riejrm" path="res://tutorial/Hearts/Diamonds_card_02.png" id="28_xv6by"]
+[ext_resource type="Texture2D" uid="uid://dqgir34c8671e" path="res://tutorial/Hearts/Diamonds_card_03.png" id="29_54tiu"]
+[ext_resource type="Texture2D" uid="uid://gbb2ono3jftk" path="res://tutorial/Hearts/Diamonds_card_04.png" id="30_a17dw"]
+[ext_resource type="Texture2D" uid="uid://daoys446t3e1k" path="res://tutorial/Hearts/Diamonds_card_05.png" id="31_rfohn"]
+[ext_resource type="Texture2D" uid="uid://blk1qr4chm6xf" path="res://tutorial/Hearts/Diamonds_card_06.png" id="32_o7bg7"]
+[ext_resource type="Texture2D" uid="uid://cmgvcbpui2abu" path="res://tutorial/Hearts/Diamonds_card_07.png" id="33_tlebe"]
+[ext_resource type="Texture2D" uid="uid://dvh5bwc0nxdc1" path="res://tutorial/Hearts/Diamonds_card_08.png" id="34_0on8w"]
+[ext_resource type="Texture2D" uid="uid://dgofh1gkhjsvw" path="res://tutorial/Hearts/Diamonds_card_09.png" id="35_7p7rr"]
+[ext_resource type="Texture2D" uid="uid://ctu72oh7gj2yk" path="res://tutorial/Hearts/Diamonds_card_10.png" id="36_2x3dj"]
+[ext_resource type="Texture2D" uid="uid://bexcirlljnh8e" path="res://tutorial/Hearts/Diamonds_card_11.png" id="37_6xedv"]
+[ext_resource type="Texture2D" uid="uid://dfrl3keg4b2ep" path="res://tutorial/Hearts/Diamonds_card_12.png" id="38_7xl1a"]
+[ext_resource type="Texture2D" uid="uid://b8l0qf0r8t4uc" path="res://tutorial/Hearts/Diamonds_card_13.png" id="39_56g86"]
+[ext_resource type="Texture2D" uid="uid://f5ar20qjyy4b" path="res://tutorial/Hearts/Diamonds_card_01.png" id="40_gn0nx"]
+[ext_resource type="Texture2D" uid="uid://bvmv3v1h6gy88" path="res://tutorial/Hearts/Clubs_card_02.png" id="41_owl1j"]
+[ext_resource type="Texture2D" uid="uid://hk10xr8jypes" path="res://tutorial/Hearts/Clubs_card_03.png" id="42_17sot"]
+[ext_resource type="Texture2D" uid="uid://dnaemoyy7ct7t" path="res://tutorial/Hearts/Clubs_card_04.png" id="43_q82h8"]
+[ext_resource type="Texture2D" uid="uid://cc56fvqxpgdqt" path="res://tutorial/Hearts/Clubs_card_05.png" id="44_pu1e7"]
+[ext_resource type="Texture2D" uid="uid://nhe6iq1dn7ls" path="res://tutorial/Hearts/Clubs_card_06.png" id="45_5s2m4"]
+[ext_resource type="Texture2D" uid="uid://bv856a2kxgma4" path="res://tutorial/Hearts/Clubs_card_07.png" id="46_nb4kt"]
+[ext_resource type="Texture2D" uid="uid://b4i3itubctduy" path="res://tutorial/Hearts/Clubs_card_08.png" id="47_k1h31"]
+[ext_resource type="Texture2D" uid="uid://bgrnlfh4tkkni" path="res://tutorial/Hearts/Clubs_card_09.png" id="48_qaqsv"]
+[ext_resource type="Texture2D" uid="uid://dnvf60uvus845" path="res://tutorial/Hearts/Clubs_card_10.png" id="49_el07g"]
+[ext_resource type="Texture2D" uid="uid://dtmerofhcgbls" path="res://tutorial/Hearts/Clubs_card_11.png" id="50_1ogv1"]
+[ext_resource type="Texture2D" uid="uid://8m8gw6a6s477" path="res://tutorial/Hearts/Clubs_card_12.png" id="51_yyjho"]
+[ext_resource type="Texture2D" uid="uid://cu0j1yuc14wju" path="res://tutorial/Hearts/Clubs_card_13.png" id="52_7il8c"]
+[ext_resource type="Texture2D" uid="uid://drfqpwhg1mekc" path="res://tutorial/Hearts/Clubs_card_01.png" id="53_omrow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21626"]
 size = Vector2(80, 102)
@@ -10,10 +61,317 @@ size = Vector2(80, 102)
 position = Vector2(1743, 200)
 script = ExtResource("1_21626")
 
-[node name="cardHeartA" type="Sprite2D" parent="."]
+[node name="H2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("2_devs7")
+
+[node name="H3" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("3_k0113")
+
+[node name="H4" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("4_f7hxd")
+
+[node name="H5" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("5_tnhea")
+
+[node name="H6" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("6_jx8hw")
+
+[node name="H7" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("7_tn0c3")
+
+[node name="H8" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("8_adaby")
+
+[node name="H9" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("9_boy1y")
+
+[node name="H10" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("10_yid7b")
+
+[node name="H11" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("11_1o81i")
+
+[node name="H12" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("12_47kqe")
+
+[node name="H13" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("13_o6uox")
+
+[node name="H14" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, -1.90735e-06)
 scale = Vector2(6, 6)
 texture = ExtResource("1_27cya")
+
+[node name="S2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("15_oywkj")
+
+[node name="S3" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("16_owtdr")
+
+[node name="S4" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("17_ohqdg")
+
+[node name="S5" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("18_nx60x")
+
+[node name="S6" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("19_8khol")
+
+[node name="S7" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("20_i51m3")
+
+[node name="S8" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("21_yl0gs")
+
+[node name="S9" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("22_a5f05")
+
+[node name="S10" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("23_eql3u")
+
+[node name="S11" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("24_hivq1")
+
+[node name="S12" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("25_yyaeu")
+
+[node name="S13" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("26_jdobr")
+
+[node name="S14" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("27_2axjt")
+
+[node name="D2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("28_xv6by")
+
+[node name="D3" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("29_54tiu")
+
+[node name="D4" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("30_a17dw")
+
+[node name="D5" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("31_rfohn")
+
+[node name="D6" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("32_o7bg7")
+
+[node name="D7" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("33_tlebe")
+
+[node name="D8" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("34_0on8w")
+
+[node name="D9" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("35_7p7rr")
+
+[node name="D10" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("36_2x3dj")
+
+[node name="D11" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("37_6xedv")
+
+[node name="D12" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("38_7xl1a")
+
+[node name="D13" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("39_56g86")
+
+[node name="D14" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("40_gn0nx")
+
+[node name="C2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("41_owl1j")
+
+[node name="C3" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("42_17sot")
+
+[node name="C4" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("43_q82h8")
+
+[node name="C5" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("44_pu1e7")
+
+[node name="C6" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("45_5s2m4")
+
+[node name="C7" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("46_nb4kt")
+
+[node name="C8" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("47_k1h31")
+
+[node name="C9" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("48_qaqsv")
+
+[node name="C10" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("49_el07g")
+
+[node name="C11" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("50_1ogv1")
+
+[node name="C12" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("51_yyjho")
+
+[node name="C13" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("52_7il8c")
+
+[node name="C14" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -1.90735e-06)
+scale = Vector2(6, 6)
+texture = ExtResource("53_omrow")
 
 [node name="Area2D" type="Area2D" parent="."]
 
