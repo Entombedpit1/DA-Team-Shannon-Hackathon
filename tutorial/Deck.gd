@@ -20,6 +20,7 @@ func draw_card():
 		$Area2D/CollisionShape2D.disabled = true
 		$Sprite2D.visible = false
 	
+	print("draw card")
 	var card_scene = preload(CARD_SCENE_PATH)
 	var new_card = card_scene.instantiate()
 	$"../CardManager".add_child(new_card)
