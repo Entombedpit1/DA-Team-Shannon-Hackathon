@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7thnnpg3h0s1"]
+
+[ext_resource type="Script" uid="uid://37bmu1xxomiu" path="res://artificial stupidity/mcts_backup.gd" id="1_q66i0"]
+
+[node name="Atestates" type="Node2D"]
+script = ExtResource("1_q66i0")
