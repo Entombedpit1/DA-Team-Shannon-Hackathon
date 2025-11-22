@@ -1,4 +1,4 @@
-extends Resource
+extends Node
 
 var SUIT_NAMES:Array[StringName] = [
 	&"Diamonds",
@@ -8,16 +8,16 @@ var SUIT_NAMES:Array[StringName] = [
 	&"Wild"
 	]
 # default deck
-var DEFAULT_DECK:Dictionary[int,CardResource] 
 
-func populate_default_cards():
+func populate_default_cards() -> Dictionary[int,CardResource]:
+	var DEFAULT_DECK:Dictionary[int,CardResource] 
 	for card_num in 52:
 		DEFAULT_DECK[card_num] = CardResource.new()
 	
 	# populates default deck with all 52 cards in a standard deck
 	var i:int = 0;
 	for suit in 4:
-		for rank in range(2,14):
+		for rank in range(2,15):
 			DEFAULT_DECK[i].Suit = SUIT_NAMES[suit]
 			DEFAULT_DECK[i].Rank = rank
 			# damage equal to rank (face cards are 10, aces are 11)
@@ -26,3 +26,4 @@ func populate_default_cards():
 			DEFAULT_DECK[i].Defence = 11 if (rank == 14) else max(rank, 10)
 			i = i + 1
 	print(i)
+	return DEFAULT_DECK
