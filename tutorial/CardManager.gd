@@ -11,12 +11,11 @@ var player_hand_reference
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	screen_size = get_viewport_rect().size
+	screen_size = get_viewport_rect().size/100
 	player_hand_reference = $"../PlayerHand"
 	$"../InputManager".connect("left_mouse_button_released", on_left_click_released)
 	
 	
-#>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
