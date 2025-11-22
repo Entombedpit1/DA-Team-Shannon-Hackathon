@@ -22,9 +22,11 @@ func _ready() -> void:
 		
 
 func add_card_to_hand(card):
-	player_hand.insert(0, card)
-	update_hand_position()
-	
+	if card not in player_hand:
+		player_hand.insert(0, card)
+		update_hand_position()
+	else:
+		animate_card_to_position(card, card.hand_position)
 
 
 func update_hand_position():
@@ -32,6 +34,7 @@ func update_hand_position():
 		#get new card position based on index passed
 		var new_postion = Vector2(calculate_card_postion(i), HAND_Y_POSITION)
 		var card = player_hand[i]
+		card.hand_position = new_postion
 		animate_card_to_position(card, new_postion)
 		
 
@@ -45,3 +48,10 @@ func calculate_card_postion(index):
 func animate_card_to_position(card, new_position):
 	var tween = get_tree().create_tween()
 	tween.tween_property(card, "position", new_position, 0.1)
+
+
+func remove_card_from_hand(card):
+	if card in player_hand:
+		player_hand.erase(card)
+		update_hand_position()
+	
