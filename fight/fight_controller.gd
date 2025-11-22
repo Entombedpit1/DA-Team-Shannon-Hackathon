@@ -51,7 +51,7 @@ func _ready() -> void:
 	example = 0
 	DEFAULT_DECK = DefaultCards.populate_default_cards()
 	print("Power suit: ", power_suit)
-	
+
 
 
 func attack(card:CardResource) -> bool:
@@ -77,6 +77,7 @@ func defend(attacking_card:CardResource, defending_card:CardResource) -> bool:
 			# REMEMBER TO IMPLEMENT GRAPHICS
 			open_attacks.erase(attacking_card)
 			table_arr.append(defending_card)
+			print("successfully defended")
 			return true
 	print("not allowed! defend better you bozo")
 	return false
