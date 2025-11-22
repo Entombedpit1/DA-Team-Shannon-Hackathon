@@ -8,7 +8,7 @@ size = Vector2(80, 102)
 [node name="card" type="Node2D"]
 
 [node name="cardHeartA" type="Sprite2D" parent="."]
-position = Vector2(0, -1.9073486e-06)
+position = Vector2(0, -1.90735e-06)
 scale = Vector2(3, 3)
 texture = ExtResource("1_27cya")
 
