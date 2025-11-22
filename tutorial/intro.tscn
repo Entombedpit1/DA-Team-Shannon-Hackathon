@@ -3,7 +3,13 @@
 [ext_resource type="Script" uid="uid://dt1yvs5blirv0" path="res://tutorial/CardManager.gd" id="1_ud2wk"]
 [ext_resource type="PackedScene" uid="uid://4uhjpa8yc0sm" path="res://tutorial/Card.tscn" id="2_hmjho"]
 [ext_resource type="PackedScene" uid="uid://8wdcilxh8ivh" path="res://tutorial/CardSlot.tscn" id="3_hmjho"]
-[ext_resource type="Script" uid="uid://cefyf8jllqdrq" path="res://tutorial/CardSlot.gd" id="4_43tuy"]
+
+[sub_resource type="GDScript" id="GDScript_hmjho"]
+resource_local_to_scene = true
+script/source = "extends Node2D
+
+var card_in_slot = false
+"
 
 [node name="Intro" type="Node2D"]
 
@@ -22,4 +28,4 @@ scale = Vector2(2, 2)
 
 [node name="CardSlot" parent="." instance=ExtResource("3_hmjho")]
 position = Vector2(731, 215)
-script = ExtResource("4_43tuy")
+script = SubResource("GDScript_hmjho")
