@@ -5,7 +5,8 @@ extends Node
 func _ready() -> void:
 	pass # Replace with function body.
 
+func my_custom_func() -> void:
+	print("my custom function is better than yours")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func on_play_gain_shield() -> void:
 	pass

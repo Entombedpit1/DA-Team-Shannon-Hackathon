@@ -12,12 +12,14 @@ config_version=5
 
 config/name="dahack4"
 run/main_scene="uid://cegbgjn8uyn05"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerInfo="*res://singletons/player_info.gd"
+GlobalInfo="*res://singletons/GlobalInfo.gd"
+DefaultCards="*res://singletons/default_cards.gd"
+CustomCardFunctions="*res://singletons/custom_card_functions.gd"
 
 [display]
 
