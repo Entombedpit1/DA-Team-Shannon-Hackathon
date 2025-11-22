@@ -11,13 +11,15 @@ position = Vector2(1743, 200)
 script = ExtResource("1_21626")
 
 [node name="cardHeartA" type="Sprite2D" parent="."]
-position = Vector2(0, -1.90735e-06)
+position = Vector2(-78, 73)
 scale = Vector2(6, 6)
 texture = ExtResource("1_27cya")
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 350)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-78, -278)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_21626")
 
