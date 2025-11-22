@@ -13,12 +13,10 @@ var player_hand_reference
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	player_hand_reference = $"../PlayerHand"
-<<<<<<< HEAD
-=======
 	$"../InputManager".connect("left_mouse_button_released", on_left_click_released)
 	
 	
->>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
+#>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
