@@ -37,7 +37,6 @@ func _ready():
 	print("##########################################")
 	print(mountain_cargo_tree_search(sample_gamestate, 1000))
 	print("##########################################")
-	print("##########################################")
 	print(mountain_cargo_tree_search(sample_gamestate, 10000))
 	print("##########################################")
 

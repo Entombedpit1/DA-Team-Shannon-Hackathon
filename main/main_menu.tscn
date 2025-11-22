@@ -109,29 +109,3 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_dhah8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w2mlq")
 text = "Exit
 "
-
-<<<<<<< HEAD
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 48.000008
-offset_top = 161.0
-offset_right = 812.0
-offset_bottom = 434.0
-rotation = -0.174533
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.996078, 0.992157, 0.992157, 0.670588)
-theme_override_colors/font_outline_color = Color(0.996078, 0.984314, 0.968627, 0.964706)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_w2mlq")
-theme_override_font_sizes/font_size = 150
-text = "Durak"
-
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
-=======
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button2" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/Button3" to="." method="_on_exit_pressed"]
->>>>>>> 436eac07172b8ddaca9389a6e34e61a2f52b15af
