@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://crag6yfk6n8fu"]
+[gd_scene load_steps=2 format=3 uid="uid://crag6yfk6n8fu"]
+
+[ext_resource type="Texture2D" uid="uid://c47i1dogv110j" path="res://tutorial/Hearts/Hearts_card_01.png" id="1_eher8"]
 
 [node name="Intro" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(147, 153)
+texture = ExtResource("1_eher8")
