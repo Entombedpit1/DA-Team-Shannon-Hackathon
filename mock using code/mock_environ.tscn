@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://breqrhxnbd2pw"]
 
-[ext_resource type="Script" uid="uid://bd1drscf8xcrq" path="res://mock using code/mock_environment.gd" id="1_sw74u"]
+[ext_resource type="Script" uid="uid://bvhsotwbdat8s" path="res://artificial stupidity/mcts.gd" id="1_sw74u"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_sw74u")
