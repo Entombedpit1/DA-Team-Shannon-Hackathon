@@ -171,18 +171,21 @@ func navigate_to_leaf(node:MctsNode) -> MctsNode:
 	return next_node
 
 func mountain_cargo_tree_search(root_state:GameState, iteration_limit:int) -> Callable:
-	var new_node:MctsNode = MctsNode.new()
-	new_node.game_state = root_state
-	new_node.parent_node = null
-	new_node.available_actions = get_legal_actions(new_node.game_state)
+	var root_node:MctsNode = MctsNode.new()
+	root_node.game_state = root_state
+	root_node.parent_node = null
+	root_node.available_actions = get_legal_actions(root_node.game_state)
 	print("FOR THIS SCENARIO")
-	#new_node.game_state.print_game_state()
+	#root_node.game_state.print_game_state()
 	print("available acitons:::::::")
-	print(new_node.available_actions)
+	print(root_node.available_actions)
 	var i:int = 0
 	while (i < iteration_limit):
-		var leaf_node:MctsNode = new_node
-		print(leaf_node)
+		var leaf_node:MctsNode = MctsNode.new()
+		leaf_node.parent_node = root_node
+		var available_actions:Array[Callable]
+		var action_parent_took:Callable
+		var game_state:GameState
 		var score_result:int
 		while (leaf_node.available_actions.is_empty()):
 			leaf_node = leaf_node.max_ucb_child_of_node()
