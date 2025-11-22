@@ -2,17 +2,18 @@
 
 [ext_resource type="Script" uid="uid://dt1yvs5blirv0" path="res://tutorial/CardManager.gd" id="1_ud2wk"]
 [ext_resource type="PackedScene" uid="uid://8wdcilxh8ivh" path="res://tutorial/CardSlot.tscn" id="3_hmjho"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://swta6xvwkeoj" path="res://tutorial/PlayerHand.gd" id="4_pyr1x"]
+=======
+[ext_resource type="Script" uid="uid://cefyf8jllqdrq" path="res://tutorial/CardSlot.gd" id="4_43tuy"]
+[ext_resource type="Script" uid="uid://xnfgh0vh8jwx" path="res://tutorial/PlayerHand.gd" id="4_pyr1x"]
+>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
 [ext_resource type="Texture2D" uid="uid://ckxrjntfcc1g1" path="res://tutorial/back_0.png" id="5_pyr1x"]
 [ext_resource type="Script" uid="uid://ch2o02841k7e3" path="res://tutorial/Deck.gd" id="5_qxo2y"]
 [ext_resource type="Script" uid="uid://bmqwe05n1ore4" path="res://tutorial/InputManager.gd" id="7_6rdw8"]
 
-[sub_resource type="GDScript" id="GDScript_hmjho"]
-resource_local_to_scene = true
-script/source = "extends Node2D
-
-var card_in_slot = false
-"
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvhjn"]
+size = Vector2(26, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyr1x"]
 size = Vector2(4.3888893, 5.638889)
@@ -23,8 +24,13 @@ size = Vector2(4.3888893, 5.638889)
 script = ExtResource("1_ud2wk")
 
 [node name="CardSlot" parent="." instance=ExtResource("3_hmjho")]
+<<<<<<< HEAD
 position = Vector2(961, 472)
 script = SubResource("GDScript_hmjho")
+=======
+position = Vector2(967, 476)
+script = ExtResource("4_43tuy")
+>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
 
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("4_pyr1x")
@@ -32,6 +38,7 @@ script = ExtResource("4_pyr1x")
 [node name="Deck" type="Node2D" parent="."]
 script = ExtResource("5_qxo2y")
 
+<<<<<<< HEAD
 [node name="DeckImage" type="Sprite2D" parent="Deck"]
 z_index = -2
 position = Vector2(1730, 200)
@@ -47,6 +54,22 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/DeckImage/Area2D"]
 position = Vector2(1730, 200)
 shape = SubResource("RectangleShape2D_pyr1x")
+=======
+[node name="Sprite2D" type="Sprite2D" parent="Deck"]
+z_index = -2
+position = Vector2(1743, 200)
+scale = Vector2(6, 6)
+texture = ExtResource("5_pyr1x")
+
+[node name="Area2D" type="Area2D" parent="Deck"]
+position = Vector2(1743, 200)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D"]
+scale = Vector2(6, 6)
+shape = SubResource("RectangleShape2D_kvhjn")
+>>>>>>> parent of 22be05d (Merge branch 'master' of https://github.com/Entombedpit1/DA-Team-Shannon-Hackathon)
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("7_6rdw8")
